@@ -15,14 +15,36 @@
             background: #ffffff;
         }
 
+        
         .block-black {
             background: url("portadadisp.png") center center / cover no-repeat;
             color: white;
             text-align: right;
-            padding: 100px 20px;
+            padding: 50px 20px;
             position: relative;
         }
 
+/*
+        .block-black {
+            position: relative;
+            color: white;
+            text-align: right;
+            padding: 0;
+        }
+
+        .hero-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .hero-content {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 50px 20px;
+        }
+*/
         .title {
             font-family: 'Bebas Neue', sans-serif;
             font-size: 78px;
@@ -33,7 +55,7 @@
 
         .subtitle {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: 48px;
+            font-size: 40px;
             color: #CFF8FF;
             text-shadow: 0 0 6px #3276CE;
             margin-top: 10px;
@@ -103,12 +125,13 @@
 
         .credits-text {
             max-width: 700px;
-            margin: 20px auto;
+            margin: 10px auto;
             font-size: 17px;
         }
 
         .credits-list {
-            margin-top: 20px;
+            margin-top: 10px;
+            margin-bottom: 5px;
             line-height: 1.6;
             font-size: 17px;
         }
@@ -136,9 +159,8 @@
             padding-bottom: 40px;
         }
 
-        .fecha {
+        .font-smaller {
             font-size: 14px;
-            /* un poco más chica */
             opacity: 0.85;
             margin-top: 10px;
         }
@@ -151,19 +173,26 @@
 
     -->
     <div class="block-black">
-        <h1 class="title">DISPAROS EN ROSARIO</h1>
-        <h2 class="subtitle">LOS PASADIZOS ENTRE LA VENTA LEGAL DE ARMAS Y EL CRIMEN</h2>
-        <h3 class="bajada">La 9mm domina un mercado en expansión y explica la violencia armada registrada en la
-            provincia
-            de Santa Fe. Esta producción con foco audiovisual revela cómo esa pistola presenta datos esenciales para la
-            prevención y sanción del delito.</h3>
-        <img src="img\FOPEA_DJVBOOTCAMP_logoblanco.svg" alt="Logo" style="margin-top:20px; width:300px; height:auto;" />
+<!-- 
+        <img class="hero-img" src="portadadisp.png" alt="">
+    -->
+        <div class="hero-content">
+            <h1 class="title">DISPAROS EN ROSARIO</h1>
+            <h2 class="subtitle">LOS PASADIZOS ENTRE LA VENTA LEGAL DE ARMAS Y EL CRIMEN</h2>
+            <h3 class="bajada">La 9mm domina un mercado en expansión y explica la violencia armada registrada en la
+                provincia
+                de Santa Fe. Esta producción con foco audiovisual revela cómo esa pistola presenta datos esenciales para
+                la
+                prevención y sanción del delito.</h3>
+            <img src="img\FOPEA_DJVBOOTCAMP_logoblanco.svg" alt="Logo"
+                style="margin-top:20px; width:300px; height:auto;" />
+        </div>
     </div>
 
     <!-- Bloque 2 -->
     <div class="content-block">
 
-        <p class="fecha">Argentina, 17 de diciembre de 2025</p>
+        <p class="font-smaller">Argentina, 17 de diciembre de 2025</p>
 
         <p>El mercado de armas de fuego en Rosario y la provincia de Santa Fe conforma un universo opaco. Este proyecto
             de Data Journalism Visualization (DJV) Bootcamp del Foro de Periodismo Argentino (FOPEA) se sumerge en esa
@@ -270,15 +299,16 @@
         <p class="credits-text">Esta visualización de una investigación periodística basada en datos fue elaborada
             durante el segundo semestre de 2025 en el ámbito de Data Journalism Visualization Bootcamp del <a
                 href="https://fopea.org/" target="_blank">Foro de Periodismo Argentino</a>. El programa recibió el apoyo
-            de la Embajada de Suiza en la Argentina. Contacto: fopea@fopea.org</p>
+            de la Embajada de Suiza en la Argentina. Contacto: fopea@fopea.org </p>
+        <br>
         <div class="credits-list">
-            <p>Investigación Periodística: Agustín Vissio</p>
-            <p>Edición y Diseño Audiovisual: Flavio Stiavetti</p>
-            <p>Guión y Desarrollo: Diana Agustina Fernández</p>
-            <p>Mentoría: Andrés Snitcofsky</p>
-            <p>Liderazgo de DJV Bootcamp: Irene Benito</p>
-            <p>Supervisión de FOPEA: Amelia Corazza (directora ejecutiva) y Paula Moreno Román (secretaria)</p>
-            <p>Coordinación de Comunicación: Sol Clemente</p>
+            <p class="credits-list">Investigación Periodística: Agustín Vissio</p>
+            <p class="credits-list">Edición y Diseño Audiovisual: Flavio Stiavetti</p>
+            <p class="credits-list">Guión y Desarrollo: Diana Agustina Fernández</p>
+            <p class="credits-list">Mentoría: Andrés Snitcofsky</p>
+            <p class="credits-list">Liderazgo de DJV Bootcamp: Irene Benito</p>
+            <p class="credits-list">Supervisión de FOPEA: Amelia Corazza (directora ejecutiva) y Paula Moreno Román (secretaria)</p>
+            <p class="credits-list">Coordinación de Comunicación: Sol Clemente</p>
         </div>
 
         <p class="share">Compartí esta página en redes sociales:</p>
@@ -314,7 +344,7 @@
         <div class="footer">
             <p>DISPAROS EN ROSARIO</p>
             <p>Los pasadizos entre la venta legal de armas y el crimen</p>
-            <p>Copyright © 2025 - Todos los derechos reservados.</p>
+            <p class="font-smaller">Copyright © 2025 - Todos los derechos reservados.</p>
         </div>
     </div>
 </body>
