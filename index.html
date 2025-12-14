@@ -1,352 +1,503 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="favicon.png" />
     <title>DISPAROS EN ROSARIO</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+      @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
-        body {
-            margin: 0;
-            font-family: "Roboto", Arial, sans-serif;
-            background: #ffffff;
-        }
+      body {
+        margin: 0;
+        font-family: "Roboto", Arial, sans-serif;
+        background: #ffffff;
+      }
 
-        
-        .block-black {
-            background: url("portadadisp.png") center center / cover no-repeat;
-            color: white;
-            text-align: right;
-            padding: 50px 20px;
-            position: relative;
-        }
+      a {
+        color: #000;
+        text-decoration: underline;
+      }
 
-/*
-        .block-black {
-            position: relative;
-            color: white;
-            text-align: right;
-            padding: 0;
-        }
+      a:hover {
+        text-shadow: 0 0 2px #3276ce;
+      }
 
-        .hero-img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
+      .block-black {
+        background: url("portadadisp.png") center center / cover no-repeat;
+        color: white;
+        text-align: right;
+        padding: 50px 20px;
+        position: relative;
+      }
 
-        .hero-content {
-            position: absolute;
-            top: 0;
-            right: 0;
-            padding: 50px 20px;
-        }
-*/
-        .title {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 78px;
-            color: #CFF8FF;
-            text-shadow: 0 0 8px #3276CE;
-            margin: 0;
-        }
+      .title {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 70px;
+        color: #cff8ff;
+        text-shadow: 0 0 8px #3276ce;
+        margin: 0;
+      }
 
-        .subtitle {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 40px;
-            color: #CFF8FF;
-            text-shadow: 0 0 6px #3276CE;
-            margin-top: 10px;
-        }
+      .subtitle {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 35px;
+        color: #cff8ff;
+        text-shadow: 0 0 6px #3276ce;
+        margin-top: 10px;
+      }
 
-        .subtitulo {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 24px;
-            margin-top: 40px;
-            font-weight: bold;
-            text-shadow: 0 0 6px #3276CE;
-        }
+      .bajada {
+        max-width: 750px;
+        margin-left: auto;
+        font-size: 16px;
+        line-height: 1.6;
+        color: #fff;
+        text-align: right;
+      }
 
-        .bajada {
-            max-width: 750px;
-            margin-left: auto;
-            margin-right: 20px;
-            font-size: 18px;
-            line-height: 1.6;
-            color: #fff;
-            text-align: right;
-        }
+      .subtitulo {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 28px;
+        margin-top: 40px;
+        font-weight: bold;
+        text-shadow: 0 0 6px #3276ce;
+      }
 
-        .content-block {
-            background: #fff;
-            color: #000;
-            padding: 40px 20px;
-            max-width: 900px;
-            margin: auto;
-            line-height: 1.7;
-            font-size: 18px;
-        }
+      .content-block {
+        background: #fff;
+        color: #000;
+        padding: 40px 20px;
+        max-width: 900px;
+        margin: auto;
+        line-height: 1.7;
+        font-size: 16px;
+      }
 
-        .shorts-container {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-            margin-top: 40px;
-            flex-wrap: wrap;
-        }
+      .shorts-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        margin-top: 40px;
+        flex-wrap: wrap;
+      }
 
-        .shorts-container iframe {
-            flex: 1;
-            min-width: 250px;
-            height: 400px;
-        }
+      .shorts-container iframe {
+        flex: 1;
+        min-width: 250px;
+        height: 400px;
+      }
 
-        .extra-paragraph {
-            margin-top: 30px;
-            font-size: 18px;
-        }
+      .extra-paragraph {
+        margin-top: 30px;
+        font-size: 18px;
+      }
 
-        .credits-block {
-            background: url("PortadaEnd.png") center center / cover no-repeat;
-            color: white;
-            text-align: center;
-            padding: 60px 20px;
-            position: relative;
-        }
+      .credits-block {
+        background: url("PortadaEnd.png") center center / cover no-repeat;
+        color: white;
+        text-align: center;
+        padding: 60px 20px;
+        position: relative;
+      }
 
-        .credits-title {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 36px;
-            color: #CFF8FF;
-            text-shadow: 0 0 6px #3276CE;
-        }
+      .credits-title {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 36px;
+        color: #cff8ff;
+        text-shadow: 0 0 6px #3276ce;
+      }
 
-        .credits-text {
-            max-width: 700px;
-            margin: 10px auto;
-            font-size: 17px;
-        }
+      .credits-text {
+        max-width: 700px;
+        margin: 10px auto;
+        font-size: 16px;
+      }
 
-        .credits-list {
-            margin-top: 10px;
-            margin-bottom: 5px;
-            line-height: 1.6;
-            font-size: 17px;
-        }
+      .credits-list {
+        margin-top: 10px;
+        margin-bottom: 5px;
+        line-height: 1.6;
+        font-size: 15px;
+      }
 
-        .share {
-            margin-top: 40px;
-            font-size: 18px;
-        }
+      .credits-block a {
+        color: #fff;
+        text-decoration: underline;
+      }
 
-        .share-icons a {
-            margin: 0 10px;
-            display: inline-block;
-        }
+      .credits-block a:hover {
+        opacity: 0.9;
+        text-shadow: 0 0 6px #3276ce;
+      }
 
-        .footer-line {
-            margin: 40px auto 20px;
-            height: 1px;
-            width: 80%;
-            background: #444;
-        }
+      .share {
+        margin-top: 40px;
+        font-size: 18px;
+      }
 
-        .footer {
-            text-align: center;
-            color: #fff;
-            padding-bottom: 40px;
-        }
+      .share-icons a {
+        margin: 0 10px;
+        display: inline-block;
+      }
 
-        .font-smaller {
-            font-size: 14px;
-            opacity: 0.85;
-            margin-top: 10px;
-        }
+      .footer-line {
+        margin: 40px auto 20px;
+        height: 1px;
+        width: 80%;
+        background: #444;
+      }
+
+      .footer {
+        text-align: center;
+        color: #fff;
+        padding-bottom: 40px;
+      }
+
+      .font-smaller {
+        font-size: 14px;
+        opacity: 0.85;
+        margin-top: 10px;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-    <!-- Bloque 1 
-    background: #000;
-
-    -->
+  <body>
+    <!-- Bloque 1 -->
     <div class="block-black">
-<!-- 
-        <img class="hero-img" src="portadadisp.png" alt="">
-    -->
-        <div class="hero-content">
-            <h1 class="title">DISPAROS EN ROSARIO</h1>
-            <h2 class="subtitle">LOS PASADIZOS ENTRE LA VENTA LEGAL DE ARMAS Y EL CRIMEN</h2>
-            <h3 class="bajada">La 9mm domina un mercado en expansión y explica la violencia armada registrada en la
-                provincia
-                de Santa Fe. Esta producción con foco audiovisual revela cómo esa pistola presenta datos esenciales para
-                la
-                prevención y sanción del delito.</h3>
-            <img src="img\FOPEA_DJVBOOTCAMP_logoblanco.svg" alt="Logo"
-                style="margin-top:20px; width:300px; height:auto;" />
-        </div>
+      <h1 class="title">DISPAROS EN ROSARIO</h1>
+      <h2 class="subtitle">
+        LOS PASADIZOS ENTRE LA VENTA LEGAL DE ARMAS Y EL CRIMEN
+      </h2>
+      <h3 class="bajada">
+        La 9mm domina un mercado en expansión y explica la violencia armada
+        registrada en la provincia de Santa Fe. Esta producción con foco
+        audiovisual revela cómo esa pistola presenta datos esenciales para la
+        prevención y sanción del delito.
+      </h3>
+      <img
+        src="FOPEA_DJVBOOTCAMP_logoblanco.svg"
+        alt="Logo"
+        style="margin-top: 20px; width: 300px; height: auto"
+      />
     </div>
 
     <!-- Bloque 2 -->
     <div class="content-block">
+      <p class="font-smaller">Argentina, 17 de diciembre de 2025</p>
 
-        <p class="font-smaller">Argentina, 17 de diciembre de 2025</p>
+      <p>
+        <strong
+          >El mercado de armas de fuego en Rosario y la provincia de Santa Fe
+          conforma un universo opaco.</strong
+        >
+        Este proyecto de Data Journalism Visualization Bootcamp (DJV) del Foro
+        de Periodismo Argentino (FOPEA) se sumerge en esa dimensión poco
+        explorada por medio de tres videos que sintetizan un gran volumen de
+        datos. La producción pone énfasis en los vínculos entre el comercio
+        legal e ilegal, el protagonismo de la 9mm y el hilo rojo que conecta a
+        esta pistola con el crimen en Santa Fe, la provincia argentina que marcó
+        récords de violencia armada. Los informes originales y completos en los
+        que se basa esta visualización fueron publicados por Aire de Santa Fe
+        (<a
+          href="https://www.airedesantafe.com.ar/santa-fe/santa-fe-rosario-y-la-9mm-un-hilo-rojo-la-venta-legal-armas-y-el-crimen-n630788"
+          target="_blank"
+          rel="noopener noreferrer"
+          >primera</a
+        >
+        y
+        <a
+          href="https://www.airedesantafe.com.ar/santa-fe/menos-armas-mas-9mm-radiografia-ventas-los-ultimos-20-anos-santa-fe-n630781"
+          target="_blank"
+          rel="noopener noreferrer"
+          >segunda</a
+        >
+        parte).
+      </p>
 
-        <p>El mercado de armas de fuego en Rosario y la provincia de Santa Fe conforma un universo opaco. Este proyecto
-            de Data Journalism Visualization (DJV) Bootcamp del Foro de Periodismo Argentino (FOPEA) se sumerge en esa
-            dimensión poco explorada por medio de tres videos que sintetizan un gran volumen de datos. La producción
-            pone énfasis en los vínculos entre el comercio legal e ilegal; el protagonismo de la 9mm y el hilo rojo que
-            conecta a esta pistola con el crimen en Santa Fe, la provincia argentina que marcó récords de violencia
-            armada. Los informes originales y completos en los que se basa esta visualización fueron publicados por Aire
-            de Santa Fe (<a
-                href="https://www.airedesantafe.com.ar/santa-fe/santa-fe-rosario-y-la-9mm-un-hilo-rojo-la-venta-legal-armas-y-el-crimen-n630788"
-                target="_blank" rel="noopener noreferrer">primera</a> y <a
-                href="https://www.airedesantafe.com.ar/santa-fe/menos-armas-mas-9mm-radiografia-ventas-los-ultimos-20-anos-santa-fe-n630781"
-                target="_blank" rel="noopener noreferrer">segunda</a> parte).</p>
+      <div class="shorts-container">
+        <iframe
+          width="315"
+          height="560"
+          src="https://youtube.com/embed/xhqSMnTsWqU"
+          title="Parte 1"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        >
+        </iframe>
+        <iframe
+          width="315"
+          height="560"
+          src="https://youtube.com/embed/x42BVpG631M"
+          title="Parte 2"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        >
+        </iframe>
+        <iframe
+          width="315"
+          height="560"
+          src="https://youtube.com/embed/Vu8o2hV_KZ4"
+          title="Parte 3"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        >
+        </iframe>
+      </div>
 
-        <div class="shorts-container">
-            <iframe width="315" height="560" src="https://youtube.com/embed/xhqSMnTsWqU" title="Parte 1" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
-                gyroscope; picture-in-picture; web-share" allowfullscreen>
-            </iframe>
-            <iframe width="315" height="560" src="https://youtube.com/embed/x42BVpG631M" title="Parte 2" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
-                gyroscope; picture-in-picture; web-share" allowfullscreen>
-            </iframe>
-            <iframe width="315" height="560" src="https://youtube.com/embed/Vu8o2hV_KZ4" title="Parte 3" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
-                gyroscope; picture-in-picture; web-share" allowfullscreen>
-            </iframe>
-        </div>
+      <p class="subtitulo">
+        La venta de armas 9mm y los homicidios: dos piezas del mismo fenómeno
+      </p>
 
-        <p class="subtitulo">La venta de armas 9mm y los homicidios: dos piezas del mismo fenómeno</p>
+      <p>
+        <strong
+          >Entre 2004 y 2024, la venta legal de armas calibre 9mm creció por
+          encima del promedio general y que cualquier otra arma.</strong
+        >
+        Estos datos oficiales provienen del
+        <a
+          href="https://www.argentina.gob.ar/seguridad/renar"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Registro Nacional de Armas</a
+        >
+        (Renar, exAnmac), que los proporcionó a partir de pedidos de acceso a la
+        información pública.
+      </p>
 
-        <p>Entre 2004 y 2024, la venta legal de armas calibre 9mm creció por encima del promedio general y que cualquier
-            otra arma. Estos datos oficiales provienen del <a href="https://www.argentina.gob.ar/seguridad/renar"
-                target="_blank" rel="noopener noreferrer">Registro Nacional de Armas</a> (Renar, exAnmac), que los
-            proporcionó a partir de pedidos de acceso a la información pública.</p>
+      <p>
+        En 2004, la 9mm representaba el 14,6% del total de armas de fuego
+        vendidas en el territorio de Santa Fe: en 2024, alcanzó el 30,2%. Pero
+        el pico se dio en 2021, cuando llegó al 41%. En la ciudad de Rosario, en
+        2004 concentraba el 14,6% del total de las ventas mientras que en 2024
+        escaló al 46,7%. En una década, la comercialización de la 9mm se duplicó
+        en la provincia, pero, en Rosario, el aumento fue cercano al 150%.
+      </p>
 
-        <p>En 2004, la 9mm representaba el 14,6% del total de armas de fuego vendidas en el territorio de Santa Fe: en
-            2024, alcanzó el 30,2%. Pero el pico se dio en 2021, cuando llegó al 41%. En la ciudad de Rosario, en 2004
-            concentraba el 14,6% del total de las ventas mientras que en 2024 escaló al 46,7%. En una década, la
-            comercialización de la 9mm se duplicó en la provincia, pero, en Rosario, el aumento fue cercano al 150%.</p>
+      <p>
+        <strong
+          >La 9mm es la pistola que más circula por el mercado legal, pero
+          también resulta popular en el ilegal.</strong
+        >
+        La usan con frecuencia las bandas criminales a menudo vinculadas con el
+        narcotráfico para asesinar y amedrentar. Entre 2022 y 2024, el 86% de
+        los casquillos que se recolectaron en escenas criminales de Rosario eran
+        de una 9mm.
+      </p>
 
-        <p>La 9mm es la pistola que más circula por el mercado legal, pero también resulta popular en el ilegal. La usan
-            con frecuencia las bandas criminales a menudo vinculadas con el narcotráfico para asesinar y amedrentar.
-            Entre 2022 y 2024, el 86% de los casquillos que se recolectaron en escenas criminales de Rosario eran de una
-            9mm. </p>
+      <p>
+        El modo de matar también se transformó y esta pistola tuvo un rol
+        protagónico. En Rosario, entre el 49% y el 65% de los homicidios se
+        cometieron con armas de fuego durante el periodo 2004-2009, según
+        <a
+          href="https://www.santafe.gob.ar/ms/osp/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >datos del Observatorio de Seguridad Pública (OSP) e informes del
+          Ministerio Público de la Acusación (MPA)</a
+        >. Sin embargo, desde 2010 en adelante, esa proporción nunca bajó del
+        70% y llegó a picos del 89%.
+      </p>
 
-        <p>El modo de matar también se transformó y esta pistola tuvo un rol protagónico. En Rosario, entre el 49% y el
-            65% de los homicidios se cometieron con armas de fuego durante el periodo 2004-2009, según <a
-                href="https://www.santafe.gob.ar/ms/osp/" target="_blank" rel="noopener noreferrer">datos del
-                Observatorio de Seguridad Pública (OSP) e informes del Ministerio Público de la Acusación (MPA)</a>. Sin
-            embargo, desde 2010 en adelante, esa proporción nunca bajó del 70% y llegó a picos del 89%.</p>
+      <p class="subtitulo">La bala se volvió la regla en Santa Fe</p>
 
+      <p>
+        El impacto de las armas en los homicidios varía de acuerdo a la
+        provincia.
+        <a
+          href="https://cloud-snic.minseg.gob.ar/Bases/SAT/HD/SAT-HD-BU_2017-2023.xlsx"
+          target="_blank"
+          rel="noopener noreferrer"
+          >El Sistema Nacional de Información Criminal (SNIC)</a
+        >
+        da un detalle minucioso sobre los instrumentos utilizados para cometer
+        homicidios entre 2017 y 2023, y allí Santa Fe vuelve a marcar la
+        diferencia. De principio a fin lidera esta tabla. Arrancó en 66% y llegó
+        a un pico del 81% en 2022. En contraste, Córdoba, Entre Ríos y la Ciudad
+        Autónoma de Buenos Aires (CABA) se movieron casi siempre en un rango del
+        40% al 55%.
+      </p>
 
-        <p class="subtitulo">La bala se volvió la regla en Santa Fe</p>
+      viz
 
-        <p>El impacto de las armas en los homicidios varía de acuerdo a la provincia. <a
-                href="https://cloud-snic.minseg.gob.ar/Bases/SAT/HD/SAT-HD-BU_2017-2023.xlsx" target="_blank"
-                rel="noopener noreferrer">El Sistema Nacional de Información
-                Criminal (SNIC)</a> da un detalle minucioso sobre los instrumentos utilizados para cometer homicidios
-            entre 2017
-            y 2023, y allí Santa Fe vuelve a marcar la diferencia. De principio a fin lidera esta tabla. Arrancó en 66%
-            y llegó a un pico del 81% en 2022. En contraste, Córdoba, Entre Ríos y la Ciudad Autónoma de Buenos Aires
-            (CABA) se movieron casi siempre en un rango del 40% al 55%.</p>
+      <p>
+        <strong
+          >Al comparar los números de homicidios, las ciudades santafesinas se
+          ubican muy por encima del resto de las capitales del país
+          estudiadas.</strong
+        >
+        <a
+          href="https://cloud-snic.minseg.gob.ar/Bases/SAT/HD/SAT-HD-BU_2017-2023.xlsx"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Según la base de datos del SNIC</a
+        >, que solo presenta información de 2017 a 2023, Rosario y Santa Fe
+        capital concentran la mayor cantidad de homicidios y en la mayoría de
+        los casos se usan armas de fuego. En este punto ambas ciudades no sólo
+        superan a Córdoba, Paraná o La Plata, sino que en algunos años sus tasas
+        duplican e incluso triplican a las de esas otras urbes argentinas.
+      </p>
 
-        viz
+      <p class="subtitulo">Por qué la 9mm</p>
 
-        <p>Al comparar los números de homicidios, las ciudades santafesinas se ubican muy por encima del resto de las
-            capitales del país estudiadas. <a
-                href="https://cloud-snic.minseg.gob.ar/Bases/SAT/HD/SAT-HD-BU_2017-2023.xlsx" target="_blank"
-                rel="noopener noreferrer">Según la base de datos del SNIC</a>, que solo presenta información de 2017 a
-            2023, Rosario y Santa Fe capital concentran la mayor cantidad de homicidios y en la mayoría de los casos se
-            usan armas de fuego. En este punto ambas ciudades no sólo superan a Córdoba, Paraná o La Plata, sino que en
-            algunos años sus tasas duplican e incluso triplican a las de esas otras urbes argentinas.</p>
+      <p>
+        La 9mm tiene la particularidad de ser un arma corta, versátil,
+        relativamente fácil de utilizar y recargar. Además, el cartucho es
+        accesible en términos económicos. Es uno de los calibres más usados a
+        nivel mundial y el que utilizan las fuerzas de seguridad de la
+        provincia. En esa línea, es también una de las armas que más se emplean
+        para cometer actos ilícitos.
+      </p>
 
+      <p class="subtitulo">Los pasadizos del mercado legal al ilegal</p>
 
-        <p class="subtitulo">Por qué la 9mm</p>
+      <p>
+        Hay que partir de la base de que prácticamente la totalidad de las armas
+        que circulan por el mercado ilegal tienen origen de manera legal. Ante
+        esa situación existen diversos canales o "pasadizos" que facilitan este
+        desvío, como los robos. El circuito más organizado y preocupante es el
+        de los "testaferros de armas".
+      </p>
 
-        <p>La 9mm tiene la particularidad de ser un arma corta, versátil, relativamente fácil de utilizar y recargar.
-            Además, el cartucho es accesible en términos económicos. Es uno de los calibres más usados a nivel mundial y
-            el que utilizan las fuerzas de seguridad de la provincia. En esa línea, es también una de las armas que más
-            se emplean para cometer actos ilícitos.</p>
+      <p>
+        El esquema de los prestanombres funciona así: son grupos que pagan a
+        personas, a menudo de bajos recursos, para adquirir armas de forma
+        lícita y, luego, las venden en el mercado ilegal. Por ejemplo, en
+        Rosario se descubrió que un monotributista que ganaba cerca de $ 600.000
+        mensuales compró 35 pistolas 9mm que valían miles de dólares durante 15
+        meses. Estas armas son revendidas en el mercado negro por dos o tres
+        veces su valor legal. Y, para complicar su rastreo, generalmente se les
+        elimina la numeración.
+      </p>
 
-        <p class="subtitulo">Los pasadizos del mercado legal al ilegal</p>
-
-        <p>Hay que partir de la base de que prácticamente la totalidad de las armas que circulan por el mercado ilegal
-            tienen origen de manera legal. Ante esa situación existen diversos canales o "pasadizos" que facilitan este
-            desvío, como los robos. El circuito más organizado y preocupante es el de los "testaferros de armas".</p>
-
-        <p>El esquema de los prestanombres funciona así: son grupos que pagan a personas, a menudo de bajos recursos,
-            para adquirir armas de forma lícita y, luego, las venden en el mercado ilegal. Por ejemplo, en Rosario se
-            descubrió que un monotributista que ganaba cerca de $ 600.000 mensuales compró 35 pistolas 9mm que valían
-            miles de dólares durante 15 meses. Estas armas son revendidas en el mercado negro por dos o tres veces su
-            valor legal. Y, para complicar su rastreo, generalmente se les elimina la numeración.</p>
-
-        <p>Otro punto de fuga importante son las filtraciones de la propia fuerza de seguridad: las venden, las pierden
-            o se las roban. Entre 2015 y junio de 2023 se registraron 598 armas policiales extraviadas o sustraídas. Eso
-            está a la vista en Rosario, donde en 2024 se encontraron en la escena del crimen de un taxista vainas
-            calibre 9mm con las iniciales "PSF", sigla de la Policía de Santa Fe.</p>
-
+      <p>
+        <strong
+          >Otro punto de fuga importante son las filtraciones de la propia
+          fuerza de seguridad: las venden, las pierden o se las roban.</strong
+        >
+        Entre 2015 y junio de 2023 se registraron 598 armas policiales
+        extraviadas o sustraídas. Eso está a la vista en Rosario, donde en 2024
+        se encontraron en la escena del crimen de un taxista vainas calibre 9mm
+        con las iniciales "PSF", sigla de la Policía de Santa Fe.
+      </p>
     </div>
 
     <!-- Bloque 3 -->
     <div class="credits-block">
-        <h3 class="credits-title">Créditos</h3>
-        <p class="credits-text">Esta visualización de una investigación periodística basada en datos fue elaborada
-            durante el segundo semestre de 2025 en el ámbito de Data Journalism Visualization Bootcamp del <a
-                href="https://fopea.org/" target="_blank">Foro de Periodismo Argentino</a>. El programa recibió el apoyo
-            de la Embajada de Suiza en la Argentina. Contacto: fopea@fopea.org </p>
-        <br>
-        <div class="credits-list">
-            <p class="credits-list">Investigación Periodística: Agustín Vissio</p>
-            <p class="credits-list">Edición y Diseño Audiovisual: Flavio Stiavetti</p>
-            <p class="credits-list">Guión y Desarrollo: Diana Agustina Fernández</p>
-            <p class="credits-list">Mentoría: Andrés Snitcofsky</p>
-            <p class="credits-list">Liderazgo de DJV Bootcamp: Irene Benito</p>
-            <p class="credits-list">Supervisión de FOPEA: Amelia Corazza (directora ejecutiva) y Paula Moreno Román (secretaria)</p>
-            <p class="credits-list">Coordinación de Comunicación: Sol Clemente</p>
-        </div>
+      <h3 class="credits-title">Créditos</h3>
+      <p class="credits-text">
+        Esta visualización de una investigación periodística basada en datos fue
+        elaborada durante el segundo semestre de 2025 en el ámbito de Data
+        Journalism Visualization Bootcamp del
+        <a href="https://fopea.org/" target="_blank"
+          >Foro de Periodismo Argentino</a
+        >. El programa recibió el apoyo de la Embajada de Suiza en la Argentina.
+        Contacto: fopea@fopea.org
+      </p>
+      <br />
+      <div class="credits-list">
+        <p class="credits-list">
+          <strong>Investigación Periodística:</strong> Agustín Vissio
+        </p>
+        <p class="credits-list">
+          <strong>Edición y Diseño Audiovisual:</strong> Flavio Stiavetti
+        </p>
+        <p class="credits-list">
+          <strong>Guión y Desarrollo:</strong> Diana Agustina Fernández
+        </p>
+        <p class="credits-list"><strong>Mentoría:</strong> Andrés Snitcofsky</p>
+        <p class="credits-list">
+          <strong>Liderazgo de DJV Bootcamp:</strong> Irene Benito
+        </p>
+        <p class="credits-list">
+          <strong>Supervisión de FOPEA:</strong> Amelia Corazza (directora
+          ejecutiva) y Paula Moreno Román (secretaria)
+        </p>
+        <p class="credits-list">
+          <strong>Coordinación de Comunicación:</strong> Sol Clemente
+        </p>
+      </div>
 
-        <p class="share">Compartí esta página en redes sociales:</p>
-        <div class="share-icons">
-            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2F.fopea.org" target="_blank">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M22 12C22 6.48 17.52 2 12 2S2 6.48 2 12c0 5 3.66 9.13 8.44 9.88v-6.99H8.08V12h2.36V9.8c0-2.33 1.39-3.62 3.52-3.62 1.02 0 2.09.18 2.09.18v2.3h-1.18c-1.16 0-1.52.72-1.52 1.46V12h2.59l-.41 2.89h-2.18v6.99C18.34 21.13 22 17 22 12z" />
-                </svg>
-            </a>
-            <a href="https://www.instagram.com/?url=https%3A%2F%2F.fopea.org" target="_blank">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2c1.65 0 3 1.35 3 3v10c0 1.65-1.35 3-3 3H7c-1.65 0-3-1.35-3-3V7c0-1.65 1.35-3 3-3h10zm-5 3.5A5.5 5.5 0 1 0 17.5 13 5.51 5.51 0 0 0 12 7.5zm0 9A3.5 3.5 0 1 1 15.5 13 3.5 3.5 0 0 1 12 16.5zM17.75 6a1.25 1.25 0 1 0 1.25 1.25A1.25 1.25 0 0 0 17.75 6z" />
-                </svg>
-            </a>
-            <a href="https://wa.me/?text=https%3A%2F%2F.fopea.org" target="_blank">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M20.52 3.48A11.86 11.86 0 0 0 12.04 0C5.44.02.14 5.32.16 11.92c0 2.1.55 4.15 1.6 5.97L0 24l6.27-1.64a12.06 12.06 0 0 0 5.75 1.47h.01c6.6 0 11.9-5.3 11.91-11.88a11.86 11.86 0 0 0-3.42-8.47zM12.03 21.3h-.01a9.5 9.5 0 0 1-4.84-1.32l-.35-.21-3.72.97.99-3.63-.23-.37a9.44 9.44 0 0 1-1.46-5.1c-.01-5.23 4.25-9.5 9.49-9.52a9.45 9.45 0 0 1 9.56 9.44c-.01 5.23-4.28 9.5-9.51 9.5zm5.4-7.14c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.19.29-.77.97-.94 1.17-.17.19-.35.2-.64.05-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.77-1.66-2.07-.17-.29-.02-.45.13-.6.13-.13.29-.35.44-.52.15-.17.2-.29.3-.49.1-.19.05-.36-.02-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.36-.27.29-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.19 2.11 3.23 5.11 4.53.71.31 1.26.49 1.69.63.71.23 1.35.2 1.86.12.56-.08 1.77-.72 2.02-1.41.25-.69.25-1.29.17-1.41-.08-.12-.27-.2-.57-.35z" />
-                </svg>
-            </a>
-            <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2F.fopea.org" target="_blank">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M4.98 3.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM3 8.98h4v12H3v-12zM14.5 8.5c-2.33 0-3.38 1.28-3.97 2.18V9h-4v12h4v-6.5c0-.35.03-.7.13-.95.28-.7.92-1.43 2-1.43 1.41 0 1.97 1.08 1.97 2.66V21h4v-6.73c0-3.6-1.92-5.77-4.13-5.77z" />
-                </svg>
-            </a>
-        </div>
+      <p class="share">Compartí esta página en redes sociales:</p>
+      <div class="share-icons">
+        <a
+          href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2F.fopea.org"
+          target="_blank"
+        >
+          <svg
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="white"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M22 12C22 6.48 17.52 2 12 2S2 6.48 2 12c0 5 3.66 9.13 8.44 9.88v-6.99H8.08V12h2.36V9.8c0-2.33 1.39-3.62 3.52-3.62 1.02 0 2.09.18 2.09.18v2.3h-1.18c-1.16 0-1.52.72-1.52 1.46V12h2.59l-.41 2.89h-2.18v6.99C18.34 21.13 22 17 22 12z"
+            />
+          </svg>
+        </a>
+        <a
+          href="https://www.instagram.com/?url=https%3A%2F%2F.fopea.org"
+          target="_blank"
+        >
+          <svg
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="white"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2c1.65 0 3 1.35 3 3v10c0 1.65-1.35 3-3 3H7c-1.65 0-3-1.35-3-3V7c0-1.65 1.35-3 3-3h10zm-5 3.5A5.5 5.5 0 1 0 17.5 13 5.51 5.51 0 0 0 12 7.5zm0 9A3.5 3.5 0 1 1 15.5 13 3.5 3.5 0 0 1 12 16.5zM17.75 6a1.25 1.25 0 1 0 1.25 1.25A1.25 1.25 0 0 0 17.75 6z"
+            />
+          </svg>
+        </a>
+        <a href="https://wa.me/?text=https%3A%2F%2F.fopea.org" target="_blank">
+          <svg
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="white"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M20.52 3.48A11.86 11.86 0 0 0 12.04 0C5.44.02.14 5.32.16 11.92c0 2.1.55 4.15 1.6 5.97L0 24l6.27-1.64a12.06 12.06 0 0 0 5.75 1.47h.01c6.6 0 11.9-5.3 11.91-11.88a11.86 11.86 0 0 0-3.42-8.47zM12.03 21.3h-.01a9.5 9.5 0 0 1-4.84-1.32l-.35-.21-3.72.97.99-3.63-.23-.37a9.44 9.44 0 0 1-1.46-5.1c-.01-5.23 4.25-9.5 9.49-9.52a9.45 9.45 0 0 1 9.56 9.44c-.01 5.23-4.28 9.5-9.51 9.5zm5.4-7.14c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.19.29-.77.97-.94 1.17-.17.19-.35.2-.64.05-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.77-1.66-2.07-.17-.29-.02-.45.13-.6.13-.13.29-.35.44-.52.15-.17.2-.29.3-.49.1-.19.05-.36-.02-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.36-.27.29-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.19 2.11 3.23 5.11 4.53.71.31 1.26.49 1.69.63.71.23 1.35.2 1.86.12.56-.08 1.77-.72 2.02-1.41.25-.69.25-1.29.17-1.41-.08-.12-.27-.2-.57-.35z"
+            />
+          </svg>
+        </a>
+        <a
+          href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2F.fopea.org"
+          target="_blank"
+        >
+          <svg
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="white"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4.98 3.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM3 8.98h4v12H3v-12zM14.5 8.5c-2.33 0-3.38 1.28-3.97 2.18V9h-4v12h4v-6.5c0-.35.03-.7.13-.95.28-.7.92-1.43 2-1.43 1.41 0 1.97 1.08 1.97 2.66V21h4v-6.73c0-3.6-1.92-5.77-4.13-5.77z"
+            />
+          </svg>
+        </a>
+      </div>
 
-        <div class="footer-line"></div>
+      <div class="footer-line"></div>
 
-        <div class="footer">
-            <p>DISPAROS EN ROSARIO</p>
-            <p>Los pasadizos entre la venta legal de armas y el crimen</p>
-            <p class="font-smaller">Copyright © 2025 - Todos los derechos reservados.</p>
-        </div>
+      <div class="footer">
+        <p>DISPAROS EN ROSARIO</p>
+        <p>Los pasadizos entre la venta legal de armas y el crimen</p>
+        <p class="font-smaller">
+          Copyright © 2025 - Todos los derechos reservados.
+        </p>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>
